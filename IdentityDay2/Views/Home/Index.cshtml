@@ -1,6 +1,15 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<IdentityDay2.Models.CMS>
+
 @{
+    Layout = "_Layout";
 }
-<h1>Hola!</h1>
+<h1>Announcements</h1>
+@foreach (var item in Model)
+{
+    @if (item.IsAuthorized)
+    {
+        <p><strong>@item.Channel:</strong> @item.Content</p>
+
+    }
+
+}

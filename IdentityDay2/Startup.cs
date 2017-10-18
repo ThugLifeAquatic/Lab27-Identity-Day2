@@ -54,7 +54,7 @@ namespace IdentityDay2
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                await context.Response.WriteAsync("Login to Create Announcements.");
             });
         }
     }

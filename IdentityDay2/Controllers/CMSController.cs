@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using IdentityDay2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace IdentityDay2.Controllers
 {
+    [Authorize]
     public class CMSController : Controller
     {
         private readonly IdentityDay2Context _context;
